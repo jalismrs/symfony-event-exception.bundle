@@ -4,3 +4,5 @@ services:
     
     event_exception.exception_event_subscriber:
         class: 'Jalismrs\EventExceptionBundle\ExceptionEventSubscriber'
+
+    Jalismrs\EventExceptionBundle\ExceptionEventSubscriber: '@event_exception.exception_event_subscriber'
