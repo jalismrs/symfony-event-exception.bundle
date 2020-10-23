@@ -1,6 +1,7 @@
 services:
     _defaults:
-        public: false
+        autowire: true
+        autoconfigure: true
     
     event_exception.exception_event_subscriber:
         class: 'Jalismrs\EventExceptionBundle\ExceptionEventSubscriber'
