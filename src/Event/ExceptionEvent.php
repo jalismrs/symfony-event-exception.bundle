@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace Jalismrs\EventExceptionBundle;
+namespace Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\Event;
 
 use Exception;
 use Symfony\Contracts\EventDispatcher\Event;
@@ -9,7 +9,7 @@ use Symfony\Contracts\EventDispatcher\Event;
 /**
  * Class ExceptionEvent
  *
- * @package Jalismrs\EventExceptionBundle
+ * @package Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\Event
  *
  * @codeCoverageIgnore
  */
