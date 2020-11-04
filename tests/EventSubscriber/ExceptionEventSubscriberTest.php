@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 namespace Tests\EventSubscriber;
 
+use Exception;
 use Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventSubscriber\ExceptionEventSubscriber;
 use Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\Event\ExceptionEvent;
 use PHPUnit\Framework\MockObject\MockObject;
@@ -36,7 +37,7 @@ class ExceptionEventSubscriberTest extends
         // arrange
         $systemUnderTest = $this->createSUT();
         
-        $exception = new \Exception();
+        $exception = new Exception();
         
         $exceptionEvent = new ExceptionEvent(
             $exception
