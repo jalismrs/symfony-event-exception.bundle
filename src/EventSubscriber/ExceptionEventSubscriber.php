@@ -1,14 +1,15 @@
 <?php
 declare(strict_types = 1);
 
-namespace Jalismrs\EventExceptionBundle;
+namespace Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventSubscriber;
 
-use Jalismrs\EventBundle\ConsoleEventSubscriberAbstract;
+use Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\Event\ExceptionEvent;
+use Jalismrs\Symfony\Common\ConsoleEventSubscriberAbstract;
 
 /**
  * Class ExceptionEventSubscriber
  *
- * @package Jalismrs\EventExceptionBundle
+ * @package Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventSubscriber
  */
 class ExceptionEventSubscriber extends
     ConsoleEventSubscriberAbstract
@@ -18,6 +19,8 @@ class ExceptionEventSubscriber extends
      *
      * @static
      * @return string[]
+     *
+     * @codeCoverageIgnore
      */
     public static function getSubscribedEvents() : array
     {
@@ -29,9 +32,9 @@ class ExceptionEventSubscriber extends
     /**
      * onException
      *
-     * @param \Jalismrs\EventExceptionBundle\ExceptionEvent $event
+     * @param \Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\Event\ExceptionEvent $event
      *
-     * @return \Jalismrs\EventExceptionBundle\ExceptionEvent
+     * @return \Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\Event\ExceptionEvent
      */
     public function onException(
         ExceptionEvent $event
