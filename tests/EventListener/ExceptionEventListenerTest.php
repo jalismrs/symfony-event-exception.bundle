@@ -1,23 +1,23 @@
 <?php
 declare(strict_types = 1);
 
-namespace Tests\EventSubscriber;
+namespace Tests\EventListener;
 
 use Exception;
-use Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventSubscriber\ExceptionEventSubscriber;
+use Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventListener\ExceptionEventListener;
 use Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\Event\ExceptionEvent;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
- * Class ExceptionEventSubscriberTest
+ * Class ExceptionEventListenerTest
  *
- * @package Tests\EventSubscriber
+ * @package Tests\EventListener
  *
- * @covers \Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventSubscriber\ExceptionEventSubscriber
+ * @covers \Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventListener\ExceptionEventListener
  */
-class ExceptionEventSubscriberTest extends
+class ExceptionEventListenerTest extends
     TestCase
 {
     /**
@@ -80,15 +80,14 @@ class ExceptionEventSubscriberTest extends
     /**
      * createSUT
      *
-     * @return \Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventSubscriber\ExceptionEventSubscriber
+     * @return \Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventListener\ExceptionEventListener
      */
-    private function createSUT() : ExceptionEventSubscriber
+    private function createSUT() : ExceptionEventListener
     {
         // arrange
-        $systemUnderTest = new ExceptionEventSubscriber();
+        $systemUnderTest = new ExceptionEventListener();
         
         // act
-        $systemUnderTest->activate();
         $systemUnderTest->setStyle($this->mockStyle);
         
         return $systemUnderTest;

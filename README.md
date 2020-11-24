@@ -1,6 +1,6 @@
 # symfony.bundle.event.exception
 
-Adds an exception event with its subscriber
+Adds an exception event with its listener
 
 ## Test
 
@@ -9,7 +9,7 @@ Adds an exception event with its subscriber
 coverage reports will be available in `var/coverage`
 
 ## Use
-EventSubscriber is assumed to be active and configured
+EventListener is assumed to be active and configured
 ```php
 use Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\Event\ExceptionEvent;
 use Symfony\Component\EventDispatcher\EventDispatcher;
