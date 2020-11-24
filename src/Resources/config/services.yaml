@@ -3,7 +3,7 @@ services:
         autowire: true
         autoconfigure: true
     
-    jalismrs_event_exception.exception_event_subscriber:
-        class: 'Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventSubscriber\ExceptionEventSubscriber'
+    jalismrs_event_exception.exception_event_listener:
+        class: 'Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventListener\ExceptionEventListener'
 
-    Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventSubscriber\ExceptionEventSubscriber: '@jalismrs_event_exception.exception_event_subscriber'
+    Jalismrs\Symfony\Bundle\JalismrsExceptionEventBundle\EventListener\ExceptionEventListener: '@jalismrs_event_exception.exception_event_listener'
